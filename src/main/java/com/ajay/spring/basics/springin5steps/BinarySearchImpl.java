@@ -14,10 +14,10 @@ public class BinarySearchImpl {
 	private SortAlgorithm sortAlgorithm; 
 	
 	
-	public BinarySearchImpl(SortAlgorithm sortAlgorithm ) {
-		super(); 
-		this.sortAlgorithm = sortAlgorithm; 
-	}
+//	public BinarySearchImpl(SortAlgorithm sortAlgorithm ) {
+//		super(); 
+//		this.sortAlgorithm = sortAlgorithm; 
+//	}
 	
 	public int binarySearch(int[] numbers, int numberToSearchFor) {
 		
@@ -31,6 +31,8 @@ public class BinarySearchImpl {
 		return 3; // temporary number 
 		
 	}
+
+
 	
 
 }
