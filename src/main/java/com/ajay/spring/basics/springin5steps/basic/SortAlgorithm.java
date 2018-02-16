@@ -1,4 +1,4 @@
-package com.ajay.spring.basics.springin5steps;
+package com.ajay.spring.basics.springin5steps.basic;
 
 public interface SortAlgorithm {
 	
