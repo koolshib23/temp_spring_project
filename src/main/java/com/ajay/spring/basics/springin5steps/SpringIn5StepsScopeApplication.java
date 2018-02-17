@@ -6,13 +6,16 @@ import org.slf4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
+import com.ajay.spring.basics.componentscan.ComponentDAO;
 import com.ajay.spring.basics.springin5steps.basic.BinarySearchImpl;
 import com.ajay.spring.basics.springin5steps.scope.PersonDAO;
 
 
 import org.slf4j.Logger;
 @SpringBootApplication
+@ComponentScan("com.ajay.spring.basics.componentscan")
 public class SpringIn5StepsScopeApplication {
 	
 	
@@ -34,8 +37,8 @@ public class SpringIn5StepsScopeApplication {
 		
 		ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsScopeApplication.class, args);
 		
-		PersonDAO personDAO = applicationContext.getBean(PersonDAO.class); 
-		PersonDAO personDAO2 = applicationContext.getBean(PersonDAO.class); 
+		ComponentDAO personDAO = applicationContext.getBean(ComponentDAO.class); 
+		ComponentDAO personDAO2 = applicationContext.getBean(ComponentDAO.class); 
 		
 		LOGGER.info("{}",personDAO);; 
 		LOGGER.info("{}", personDAO.getJdbcConnection());
